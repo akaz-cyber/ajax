@@ -1,0 +1,20 @@
+{
+ "products": [
+    {
+       "name": "Mushrooms",
+       "imgPath": "img/products/mushroom.jpg"
+    },
+    {
+       "name": "Potatos",
+       "imgPath": "img/products/potato.jpg"
+    },
+    {
+       "name": "carrots",
+       "imgPath": "img/products/carrot.jpg"
+    },
+    {
+       "name": "Tomatoes",
+       "imgPath": "img/products/tomatoes.jpg"
+    }
+]
+}
