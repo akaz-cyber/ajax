@@ -30,7 +30,7 @@ function checkURL(hash)
 		$('#pageContent').html(default_content);
 
 		else{
-		 if(hash=="#products")
+		 if(hash=="#products")	
 		 	loadProducts();
 		 else
 		   loadPage(hash);
@@ -70,10 +70,68 @@ function loadProducts() {
   {
     var imgList= "<ul class=\"products\">";
     $.each(json.products, function () {
-      imgList += '<li><img src= "' + this.imgPath + '"><h3>' + this.name + '</h3></li>';
+      imgList += '<li><img src= "' + this.imgPath + '"><h3>' + this.name + '</h3></h3>' + this.usd + '<li><h3>' ;
     });
     imgList+='</ul>'
    $('#pageContent').html(imgList);
    $('#loading').css('visibility','hidden');
   });
-}
+}  
+
+
+
+
+
+
+$(document).ready(function () {
+ $('#navigation li a:eq(0)').click(function() {
+	$.ajax({
+		type: "GET",
+		url:"pages/page_1.html",
+        
+		success: function(result){
+			$("#pageContent").html(result);
+			$('#loading').css('visibility','hidden');
+		}
+	});
+
+ });
+ $('#navigation li a:eq(1)').click(function() {
+	$.ajax({
+		type: "GET",
+		url:"pages/page_2.html",
+		success: function(result){
+			$("#pageContent").html(result);
+			$('#loading').css('visibility','hidden');
+		}
+	});
+
+ });
+ $('#navigation li a:eq(2)').click(function() {
+	$.ajax({
+		type: "GET",
+		url:"pages/page_3.html",
+		success: function(result){
+			$("#pageContent").html(result);
+			$('#loading').css('visibility','hidden');
+		}
+	});
+
+ });
+ $('#navigation li a:eq(3)').click(function() {
+	$.ajax({
+		type: "GET",
+		url:"pages/page_4.html",
+		success: function(result){
+			$("#pageContent").html(result);
+			$('#loading').css('visibility','hidden');
+		}
+	});
+
+ });
+
+
+ 
+ 
+ 
+});
