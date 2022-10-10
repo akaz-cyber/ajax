@@ -1,3 +1,8 @@
 DirectoryIndex index.html
 Options -Indexes
+AuthName "This My Awesome Drupal Site Area!!.. Identify Yourself First."
+AuthType Basic
+AuthUserFile c:\xampp\htdocs\vhost\studentno-2\.htpasswd
+require valid-user
+
 
